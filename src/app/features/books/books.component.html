@@ -1,4 +1,13 @@
-<p>books works!</p>
-<div *ngFor="let book of books">
-  {{book.name}}
-</div>
+<mat-card *ngFor="let book of books" class="cards-books">
+  <mat-card-header>
+    <mat-card-title>{{book.name}}</mat-card-title>
+    <mat-card-subtitle>-author-</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>Les résumés des livres</mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
+
