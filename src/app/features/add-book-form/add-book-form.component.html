@@ -1,0 +1,11 @@
+<h1>Ajouter un livre à la bibliothèque</h1>
+<button routerLink="/">Consulter les livres</button>
+<mat-card>
+  <h2>Entrez un nom de livre</h2>
+  <form [formGroup]="addBookForm" (ngSubmit)="submit()">
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="name" />
+  </mat-form-field>
+  <button [disabled]="!addBookForm.valid" mat-raised-button>Add Book</button>
+  </form>
+</mat-card>

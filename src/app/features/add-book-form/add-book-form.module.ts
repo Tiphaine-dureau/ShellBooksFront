@@ -1,26 +1,30 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {BooksComponent} from "./books.component";
 import {MatCardModule} from "@angular/material/card";
+import {AddBookFormComponent} from "./add-book-form.component";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
-import {MatGridListModule} from "@angular/material/grid-list";
 import {RouterLink} from "@angular/router";
 
 
 @NgModule({
   declarations: [
-    BooksComponent
+    AddBookFormComponent
   ],
   exports: [
-    BooksComponent
+    AddBookFormComponent
   ],
   imports: [
     CommonModule,
     MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
     MatButtonModule,
-    MatGridListModule,
     RouterLink,
   ]
 })
-export class BooksModule {
+export class AddBookFormModule {
 }

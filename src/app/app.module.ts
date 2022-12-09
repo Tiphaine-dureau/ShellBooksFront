@@ -5,14 +5,16 @@ import {BooksModule} from "./features/books/books.module";
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import {AddBookFormModule} from "./features/add-book-form/add-book-form.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     BooksModule,
+    AddBookFormModule,
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,

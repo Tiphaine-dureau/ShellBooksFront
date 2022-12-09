@@ -8,12 +8,23 @@ import {HttpClient} from "@angular/common/http";
 })
 export class BooksService {
 
+  apiUrl = "http://localhost:8080";
+
   constructor(
     private http: HttpClient
   ) {
   }
 
-  public getBooks(): Observable<Book[]> {
-    return this.http.get<Book[]>("http://localhost:8080/books");
+  /*
+  ------CRUD METHODS------
+  */
+
+  getBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>(`${this.apiUrl}/books`);
   }
+
+  createBook(book: Book): Observable<Book> {
+    return this.http.post<Book>(`${this.apiUrl}/books`, book);
+  }
+
 }
